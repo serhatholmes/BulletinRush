@@ -10,6 +10,14 @@ public class EnemyController : mCharacterController
         delta.y = 0;
         var direction = delta.normalized;
         Move(direction);
+        transform.LookAt(player.transform);
     }
-    
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.transform.CompareTag($"Bullet"))
+        {
+            gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
+        }
+    }
 }
