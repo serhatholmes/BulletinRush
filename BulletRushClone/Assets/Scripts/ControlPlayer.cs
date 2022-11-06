@@ -9,7 +9,7 @@ public class ControlPlayer : mCharacterController
     [SerializeField] private ScreenTouchController input;
     [SerializeField] private ShootControl sControl;
 
-    private List<Transform> enemies = new List<Transform>();
+    public List<Transform> enemies = new List<Transform>();
 
     private int EnemyAmount;
 

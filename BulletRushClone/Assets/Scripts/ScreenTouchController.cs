@@ -11,6 +11,7 @@ public class ScreenTouchController : MonoBehaviour, IPointerDownHandler, IPointe
     public Vector2 direction{get; private set; }
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("down");
         touchPosition = eventData.position;
         pivotImage.enabled = true;
         pivotImage.transform.position = touchPosition;
@@ -18,6 +19,7 @@ public class ScreenTouchController : MonoBehaviour, IPointerDownHandler, IPointe
 
      public void OnPointerUp(PointerEventData eventData)
     {
+         Debug.Log("up");
         direction = Vector3.zero;
         pivotImage.enabled = false;
     }
